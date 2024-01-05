@@ -1,4 +1,7 @@
-const restaurantSchema = new Schema ({
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
+const restaurantSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -12,9 +15,8 @@ const restaurantSchema = new Schema ({
     dietaryRestrictions: {
         type: [String]
     }
+});
 
-})
+const Restaurant = mongoose.model('Restaurant', restaurantSchema);
 
-const Restaurants = mongoose.model('Resturants', restaurantSchema)
-
-module.exports = Restaurants;
+module.exports = Restaurant;
