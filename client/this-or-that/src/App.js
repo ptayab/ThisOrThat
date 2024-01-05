@@ -5,7 +5,7 @@ import Restaurants from './components/restaurants.component';
 import Navbar from './components/navbar.component';
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
