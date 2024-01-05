@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 require('dotenv').config()
 
+const restaurantRouter = require('./routes/restaurants');
 
 const app = express()
 app.use(cors())
@@ -13,7 +14,9 @@ mongoose.connect(uri)
 const connection = mongoose.connection
 connection.once('open', () => {
     console.log("MongoDB database connection established succesfully")
-})
+});
+
+app.use('/restaurants', restaurantRouter);
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

@@ -1,0 +1,125 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(221, 212, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wheelcontainer {
+    width: 500px;
+    height: 500px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    border: 10px solid white;
+    position: relative;
+    overflow: hidden;
+    transition: 5s;
+    top: 50px;
+}
+
+.wheelcontainer div{
+    height: 50%;
+    width: 200px;
+    position: absolute;
+    clip-path: polygon(100% 0 , 50% 100% , 0 0);
+    transform: translate(-50%);
+    transform-origin: bottom;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    left: calc(50% - 100px); 
+
+}
+
+.yes,
+.no {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+
+
+.wheelcontainer .yes1 {
+    background-color: pink;
+    left: 50%;
+}
+
+.wheelcontainer .no1 {
+    background-color: aqua;
+    transform: rotate(45deg);
+}
+
+.wheelcontainer .yes2 {
+    background-color: pink;
+    transform: rotate(90deg);
+}
+
+.wheelcontainer .no2 {
+    background-color: aqua;
+    transform: rotate(135deg);
+}
+
+.wheelcontainer .yes3 {
+    background-color: pink;
+    transform: rotate(180deg);
+}
+
+.wheelcontainer .no3 {
+    background-color: aqua;
+    transform: rotate(225deg);
+}
+
+.wheelcontainer .yes4 {
+    background-color: pink;
+    transform: rotate(270deg);
+}
+
+.wheelcontainer .no4 {
+    background-color: aqua;
+    transform: rotate(315deg);
+}
+
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 50px solid black;
+    position: absolute;
+    left: calc(50% - 15px);
+    top: 100px;
+    z-index: 1;
+}
+
+#spin {
+    position: absolute;
+    left: 45%;
+    top: 650px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.start-rotate {
+    animation: start-rotate 1s linear infinite;
+}
+@keyframes start-rotate {
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
