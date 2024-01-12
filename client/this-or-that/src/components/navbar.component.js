@@ -8,6 +8,7 @@ export default class Navbar extends Component {
                 <Link to="/">Home</Link>
                 <Link to="/restaurants">Restaurant</Link>
                 <Link to="/yesorno"> YesOrNo </Link>
+                <Link to="/number"> Number </Link>
                 <div>Navbar</div>
             </nav>
         );
