@@ -23,7 +23,7 @@ export default class YesOrNo extends Component {
 
   render() {
     return (
-      <div>
+      <div className='wheelPage'>
         YesOrNo Spinning Wheel
         <div></div>
         <span className="arrow"></span>

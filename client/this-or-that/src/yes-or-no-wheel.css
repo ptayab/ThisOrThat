@@ -1,5 +1,5 @@
 
-body{
+.wheelPage{
     margin: 0;
     padding: 0;
     background-color: rgb(221, 212, 229);
@@ -8,6 +8,7 @@ body{
     justify-content: center;
     overflow: hidden;
 }
+
 .wheelcontainer {
     width: 500px;
     height: 500px;
