@@ -31,6 +31,10 @@
   padding: 40px;
 }
 
+.decision-button:hover {
+  background-color: #a7288592;
+}
+
 .decision-button span{
   color: #a72885;
   font-family: Chalkduster;
