@@ -1,20 +1,38 @@
-.moving-graphics {
-    width: 100px;
-    height: 100px;
-    background-color: #ff5733;
-    margin: 20px auto;
-    animation: moveGraphics 2s ease-in-out infinite;
-  }
-  
-  @keyframes moveGraphics {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
+.home-container {
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-center {
+  color: #a72885;
+  font-family: Chalkduster;
+  font-size: 50px;
+  padding-top: 5%;
+}
+
+.button-container {
+  padding: 1%
+}
+.decision-button {
+  background-color: #9369e04d;
+  border: white solid 4px;
+  border-radius: 5px;
+  width: 1000px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 40px;
+}
+
+.decision-button span{
+  color: #a72885;
+  font-family: Chalkduster;
+  font-weight: bold;
+}

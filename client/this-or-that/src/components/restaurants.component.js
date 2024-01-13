@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function Restaurants() {
-  const cuisineList = ['American', 'Asian', 'Italian', 'Mexican', 'Japanese', 'Indian', 'canadian'];
+  const cuisineList = ['American', 'Asian', 'Italian', 'Mexican', 'Japanese', 'Indian', 'Canadian',
+                        'Chinese', 'Korean', 'Thai', 'Greek', 'Spanish', 'German', 'Peruvian' ];
   const dietaryList = ['vegetarian', 'halal', 'vegan'];
   const priceList = ['$', '$$', '$$$'];
 
@@ -84,66 +85,85 @@ export default function Restaurants() {
   };
 
   return (
-    <div>
+    <div className='restaurant-container'>
       <div>
-        <h3>Cuisines: </h3>
-        {cuisineList.map((cuisine, index) => (
-          <label key={cuisine}>
-            <input
-              className="optionsList"
-              type="checkbox"
-              checked={selectedCuisines.includes(cuisine)}
-              onChange={() => handleCheckbox('cuisine', cuisine)}
-              aria-label={`Checkbox for ${cuisine}`}
-            />
-            {cuisine}
-          </label>
-        ))}
-      </div>
+      <div className='filters'>
+      <div>
+          <h3>Cuisines: </h3>
+          {cuisineList.map((cuisine) => (
+            <div className='category-list' key={cuisine}>
+              <label>
+                <input
+                  className="optionsList"
+                  type="checkbox"
+                  checked={selectedCuisines.includes(cuisine)}
+                  onChange={() => handleCheckbox('cuisine', cuisine)}
+                  aria-label={`Checkbox for ${cuisine}`}
+                />
+                {cuisine}
+              </label>
+            </div>
+          ))}
+        </div>
 
-      <div>
         <h3>Dietary Restrictions: </h3>
-        {dietaryList.map((dietary, index) => (
-          <label key={dietary}>
-            <input
-              className="optionsList"
-              type="checkbox"
-              checked={selectedDietary.includes(dietary)}
-              onChange={() => handleCheckbox('dietary', dietary)}
-              aria-label={`Checkbox for ${dietary}`}
-            />
-            {dietary}
-          </label>
+        {dietaryList.map((dietary) => (
+          <div key={dietary}>
+            <label className='category-list' key={dietary}>
+              <input
+                className="optionsList"
+                type="checkbox"
+                checked={selectedDietary.includes(dietary)}
+                onChange={() => handleCheckbox('dietary', dietary)}
+                aria-label={`Checkbox for ${dietary}`}
+              />
+              {dietary}
+            </label>
+          </div>
         ))}
-      </div>
 
-      <div>
         <h3>Price: </h3>
         {priceList.map((price, index) => (
-          <label key={price}>
-            <input
-              className="optionsList"
-              type="checkbox"
-              checked={selectedPrice.includes(price)}
-              onChange={() => handleCheckbox('price', price)}
-              aria-label={`Checkbox for ${price}`}
-            />
-            {price}
-          </label>
+          <div key={index}>
+            <label className='category-list' key={price}>
+              <input
+                className="optionsList"
+                type="checkbox"
+                checked={selectedPrice.includes(price)}
+                onChange={() => handleCheckbox('price', price)}
+                aria-label={`Checkbox for ${price}`}
+              />
+              {price}
+            </label>
+          </div>
         ))}
-      </div>
-
-      <button onClick={generateRestaurant}>Find Me a Restaurant</button>
-      <div>
-        <h3>Generated Restaurant: </h3>
-        <div>
-        {generatedRestaurant.image_url && (
-        <img src={generatedRestaurant.image_url} alt="Restaurant Image" style={{ maxWidth: '50%', height: 'auto' }} />)}
-          <h4>{generatedRestaurant.name}</h4>
-          <a href={generatedRestaurant.url} target="_blank" rel="noopener noreferrer">More Information</a>
         </div>
+
+        <button onClick={generateRestaurant}>Satisfy My Cravings!</button>
       </div>
 
+      <div className='results'>
+        <h3 className='results-title'>Check out: </h3>
+        {generatedRestaurant && (
+          <div className='generated-restaurant'>
+            {generatedRestaurant.image_url && (
+              <img className='restaurant-image' src={generatedRestaurant.image_url} alt="Restaurant Image" />
+            )}
+          </div>
+        )}
+      </div>
+
+      <div className='results-information'>
+        {generatedRestaurant && (
+          <div className='generated-restaurant'>
+            <h4>{generatedRestaurant.name}</h4>
+            <p> Address: {generateRestaurant.address}</p>
+            <a href={generatedRestaurant.url} target="_blank" rel="noopener noreferrer">
+              More Information
+            </a>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
