@@ -22,7 +22,7 @@ export default class Navbar extends Component {
                                 <Link className="nav-link" to="/yesorno">YesOrNo</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/number">NumberGenerator</Link>
+                                <Link className="nav-link" to="/number">LuckyNumber</Link>
                             </li>
                         </ul>
                     </div>

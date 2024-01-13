@@ -1,0 +1,106 @@
+.restaurant-container {
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.filters {
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.388);
+}
+
+.results {
+    flex: 1;
+}
+
+.results-information {
+    flex: 1;
+    margin-right: 20px;
+}
+
+h3 {
+    padding: 10px;
+    font-size: 20px;
+    color: #a72885;
+    background-color: rgb(255, 255, 255);
+}
+
+.category-list {
+    margin-left: 10px;
+}
+
+.optionsList {
+    margin-right: 5px;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    width: 200px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #a72885;
+}
+
+.generated-restaurant img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.generated-restaurant h4 {
+    color: #000000;
+}
+
+.generated-restaurant a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.generated-restaurant a:hover {
+    text-decoration: underline;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-options label {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.results-title {
+    margin-top: 5px;
+    padding: 10px;
+    padding-left: 0px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.generated-restaurant img {
+    max-width: 100vh;
+    max-height: 100vh;
+}
+
+.results-information {
+    margin-left: 10px;
+    margin-top: 57px;
+    height: 50vh;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.471);
+    border-radius: 8px;
+}
