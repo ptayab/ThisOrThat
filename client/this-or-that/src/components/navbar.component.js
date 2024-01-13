@@ -16,13 +16,13 @@ export default class Navbar extends Component {
                                 <Link className="nav-link" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/restaurants">Restaurant</Link>
+                                <Link className="nav-link" to="/restaurants">RestaurantSearcher</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/yesorno">YesOrNo</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/number">Number</Link>
+                                <Link className="nav-link" to="/number">NumberGenerator</Link>
                             </li>
                         </ul>
                     </div>

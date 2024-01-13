@@ -24,8 +24,7 @@ export default class YesOrNo extends Component {
   render() {
     return (
       <div className='wheelPage'>
-        YesOrNo Spinning Wheel
-        <div></div>
+        <div className='wheelComponent'>
         <span className="arrow"></span>
         <div className={this.state.name} style={{ transform: `rotate(${this.state.stopAngle}deg)` }}>
           <div className="yes1">yes</div>
@@ -40,6 +39,7 @@ export default class YesOrNo extends Component {
         <button id="spin" onClick={this.startRotation}>
           Spin
         </button>
+        </div>
       </div>
     );
   }
