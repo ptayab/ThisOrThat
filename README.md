@@ -4,14 +4,14 @@ A Decision Making Web Application
 ## Getting started
 ```
 cd repo_folder
-git clone https://git.cs.usask.ca/370group_team20/equipay.git
+git clone https://github.com/ptayab/ThisOrThat.git
 ```
 
 ## Running the Project
-Backend:
+Server:
 ```
 cd existing_repo
-cd ./backend
+cd ./server
 npm install
 npm start
 ```
@@ -20,10 +20,9 @@ Frontend:
 ```
 *open a second terminal
 cd existing_repo
-cd ./equi-pay-app
+cd ./this-or-that
 npm install
 npm start
 ```
 
-## Project status
-Ongoing
+
